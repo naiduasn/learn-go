@@ -2,11 +2,16 @@ package main
 
 import "fmt"
 
+const englishHelloPrefix = "Hello, "
+
 func main() {
 	fmt.Println(Hello("Naidu"))
 }
 
-func Hello(str string) string{
-	return "Hello " + str
+/// "Hello String Function"
+func Hello(str string) string {
+	if str == "" {
+		str = "World"
+	}
+	return englishHelloPrefix + str
 }
-
